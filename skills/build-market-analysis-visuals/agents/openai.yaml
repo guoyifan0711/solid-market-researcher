@@ -1,0 +1,6 @@
+interface:
+  display_name: "市场分析逐页制图"
+  short_description: "以可追溯底稿制作重点聚焦的图表、矩阵与信息图，并执行逐页审稿闭环"
+  default_prompt: "使用 $build-market-analysis-visuals，为当前 P 制作 Visual，完成数据语义与展示自审后交我 Review。"
+policy:
+  allow_implicit_invocation: true

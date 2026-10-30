@@ -1,0 +1,7 @@
+interface:
+  display_name: "营销提案型市场分析写作"
+  short_description: "把严谨研究压缩成客户视角、承接WHO/HOW与预算的营销提案开场"
+  default_prompt: "Use $write-market-analysis-pitch to turn this market research into a concise client-facing marketing pitch opener."
+policy:
+  allow_implicit_invocation: true
+

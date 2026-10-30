@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "project_root": "..",
+  "project": {
+    "name": "",
+    "client": "",
+    "sku": "",
+    "market": "",
+    "updated_at": "",
+    "open_items": []
+  },
+  "baseline": {
+    "path": null,
+    "sha256": null,
+    "approval": {"status": "not_started", "basis": "尚未形成待确认稿"}
+  },
+  "pages": [],
+  "sources": {},
+  "claims": [],
+  "trace_graph": {
+    "schema_version": 1,
+    "project_id": "",
+    "units": {},
+    "coverage_documents": [],
+    "scopes": {},
+    "evidence": {},
+    "locations": {},
+    "uses": [],
+    "source_references": [],
+    "source_grounding": {"schema_version": 1, "evidence_reviews": {}, "use_reviews": {}}
+  },
+  "publication": {
+    "target": null,
+    "authorization": {"status": "not_granted", "basis": null},
+    "snapshot": {"path": null, "revision": null, "read_at": null, "identity": null}
+  }
+}

@@ -1,0 +1,32 @@
+@prefix ma: <urn:market-analysis:ontology:> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+ma: a owl:Ontology ; rdfs:label "市场分析证据关系词表"@zh .
+ma:Source a rdfs:Class ; rdfs:subClassOf prov:Entity ; rdfs:label "原始来源版本"@zh .
+ma:Evidence a rdfs:Class ; rdfs:subClassOf prov:Entity ; rdfs:label "引用数据或来源结论"@zh .
+ma:Scope a rdfs:Class ; rdfs:label "对应口径"@zh .
+ma:Use a rdfs:Class ; rdfs:label "引用与推导关系"@zh .
+ma:Location a rdfs:Class ; rdfs:label "引用地点及版本"@zh .
+ma:Claim a rdfs:Class ; rdfs:subClassOf prov:Entity ; rdfs:label "本稿形成的结论"@zh .
+ma:Reference a rdfs:Class ; rdfs:label "实际来源链接或书目列示"@zh .
+ma:SourceReview a rdfs:Class ; rdfs:label "返回原文的口径审查"@zh .
+ma:UseReview a rdfs:Class ; rdfs:label "原文对当前结论的适配审查"@zh .
+ma:hasSourceReview a owl:ObjectProperty ; rdfs:domain ma:Evidence ; rdfs:range ma:SourceReview .
+ma:hasUseReview a owl:ObjectProperty ; rdfs:domain ma:Use ; rdfs:range ma:UseReview .
+ma:readFrom a owl:ObjectProperty ; rdfs:domain ma:SourceReview ; rdfs:range ma:Source .
+ma:basedOnReview a owl:ObjectProperty ; rdfs:domain ma:UseReview ; rdfs:range ma:SourceReview .
+
+ma:hasEvidence a owl:ObjectProperty ; rdfs:domain ma:Source ; rdfs:range ma:Evidence .
+ma:hasScope a owl:ObjectProperty ; rdfs:range ma:Scope .
+ma:citedBy a owl:ObjectProperty ; rdfs:domain ma:Evidence ; rdfs:range ma:Use .
+ma:usedBy a owl:ObjectProperty ; rdfs:domain ma:Claim ; rdfs:range ma:Use .
+ma:atLocation a owl:ObjectProperty ; rdfs:range ma:Location .
+ma:listedBy a owl:ObjectProperty ; rdfs:domain ma:Source ; rdfs:range ma:Reference .
+ma:sameDocumentAs a owl:ObjectProperty ; rdfs:domain ma:Source ; rdfs:range ma:Source ;
+    rdfs:comment "人工确认的同一原始文档版本别名；不是不同报告的独立验证，也不等同于owl:sameAs。"@zh .
+ma:contributesTo a owl:ObjectProperty ; rdfs:domain ma:Use ; rdfs:range ma:Claim .
+ma:expresses a owl:ObjectProperty ; rdfs:domain ma:Location ; rdfs:range ma:Claim .
+ma:role a owl:DatatypeProperty ; rdfs:comment "support、contradict 或 context"@zh .
+ma:rationale a owl:DatatypeProperty ; rdfs:comment "说明支持、反证或背景如何用于目标结论"@zh .

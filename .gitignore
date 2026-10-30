@@ -1,0 +1,42 @@
+# Research and delivery materials belong outside this repository.
+projects/
+research/
+client-data/
+source-archive/
+deliverables/
+private/
+outputs/
+tmp/
+.local/
+
+# Credentials and local agent settings
+.env
+.env.*
+*.pem
+*.key
+credentials*.json
+tokens*.json
+.codex/
+.agents/
+
+# Runtime files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
+*.log
+.DS_Store
+Thumbs.db
+
+# Research binaries and data exports
+*.xlsx
+*.xls
+*.csv
+*.sqlite*
+*.db
+*.pdf
+*.docx
+*.pptx
+*.zip

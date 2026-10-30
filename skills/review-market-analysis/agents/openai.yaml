@@ -1,0 +1,6 @@
+interface:
+  display_name: "市场分析自查与验收"
+  short_description: "按研究、稿件、整合与发布阶段审查来源覆盖、计算、推导和交付一致性"
+  default_prompt: "使用 $review-market-analysis，按当前阶段审查这份市场分析，并列明实际检查、证据、问题和未验证项。"
+policy:
+  allow_implicit_invocation: true
